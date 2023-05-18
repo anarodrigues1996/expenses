@@ -21,7 +21,6 @@ class HomePage extends StatelessWidget {
           title:  const Text('Despesas'),
         ),
         body: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             const SizedBox(
@@ -72,6 +71,39 @@ class HomePage extends StatelessWidget {
               )
             );
           }).toList(),
+            ),
+            Card(
+              elevation: 5,
+              child: Padding(
+                padding: const EdgeInsets.all(10),
+                child: Column(
+                  children: [
+                     const TextField(
+                      decoration: InputDecoration(
+                        labelText: 'Despesa',
+                      )
+                    ),
+                    const TextField(
+                      decoration: InputDecoration(
+                        labelText: 'Valor(ECV)',
+                      ),
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        TextButton(
+                          onPressed: (){}, 
+                          child: const Text('Nova Trasação',
+                          style: TextStyle(color: Colors.purple),
+                          
+                          ),
+                          
+                        ),
+                      ],
+                    )
+                  ],
+                  ),
+              ),
             )
           ],
         ));
