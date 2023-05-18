@@ -17,22 +17,26 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text('Despesas'),
+          title:  const Text('Despesas'),
         ),
         body: Column(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: const [
-            SizedBox(
+          children: [
+            const SizedBox(
               child: Card(
                 color: Colors.blue,
                 elevation: 5,
                 child: Text('Grafico'),
               ),
             ),
-            Card(
-              child: Text('Lista de transações'),
-            ),
+            Column(
+              children: transaction.map((tr) {
+            return Card(
+              child: Text(tr.title),
+            );
+          }).toList(),
+            )
           ],
         ));
   }
