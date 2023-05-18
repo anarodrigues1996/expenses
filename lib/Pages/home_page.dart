@@ -1,31 +1,39 @@
+import 'package:expenses/Models/transaction.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class HomePage extends StatelessWidget {
-  const HomePage({super.key});
-
+  final transaction = [
+    Transaction(
+      id: '1', title: 'Saldo', value: 500, date: DateTime.now(),
+      
+      ),
+      Transaction(
+      id: '2', title: 'Conta de Luz', value: 1550, date: DateTime.now(),
+      
+      ),
+  ];
+   HomePage({super.key});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Despesas'),
-      ),
-      body:  Column(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: const[
+        appBar: AppBar(
+          title: const Text('Despesas'),
+        ),
+        body: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: const [
             SizedBox(
-            child: Card(
-              color: Colors.blue,
-              elevation: 5,
-              child: Text('Grafico'),
+              child: Card(
+                color: Colors.blue,
+                elevation: 5,
+                child: Text('Grafico'),
+              ),
             ),
-          ),
-           Card(
-            child: Text('Lista de transações'),
-          ),
-        ],
-      )
-    );
+            Card(
+              child: Text('Lista de transações'),
+            ),
+          ],
+        ));
   }
 }
