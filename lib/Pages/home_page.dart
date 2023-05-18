@@ -1,5 +1,6 @@
 import 'package:expenses/Models/transaction.dart';
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 
 class HomePage extends StatelessWidget {
   final transaction = [
@@ -62,7 +63,7 @@ class HomePage extends StatelessWidget {
                         style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16)
                       ),
                       Text(
-                        tr.date.toString(),
+                        DateFormat('d MMM y').format(tr.date),
                         style: const TextStyle(color: Colors.grey),
                       ),
                     ],
