@@ -8,7 +8,7 @@ class HomePage extends StatelessWidget {
       
       ),
       Transaction(
-      id: '2', title: 'Conta de Luz', value: 1550, date: DateTime.now(),
+      id: '2', title: 'Conta de Luz', value: 550, date: DateTime.now(),
       
       ),
   ];
@@ -38,7 +38,8 @@ class HomePage extends StatelessWidget {
                   Container(
                     margin: const EdgeInsets.symmetric(
                       horizontal: 15, 
-                       vertical: 10),
+                      vertical: 10
+                      ),
                        decoration: BoxDecoration(
                         border: Border.all(
                           color: Colors.purple,
@@ -46,8 +47,9 @@ class HomePage extends StatelessWidget {
                         )
                        ),
                        padding: const EdgeInsets.all(10),
-                    child: Text(tr.value.toString(),
-                    style: const TextStyle(
+                      child: Text(
+                      '${tr.value.toStringAsFixed(2)} ECV',
+                      style: const TextStyle(
                         fontWeight: FontWeight.bold, 
                         fontSize: 20, 
                         color: Colors.purple),
