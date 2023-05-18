@@ -41,16 +41,23 @@ class HomePage extends StatelessWidget {
                        vertical: 10),
                        decoration: BoxDecoration(
                         border: Border.all(
-                          color: Colors.black,
+                          color: Colors.purple,
                           width: 2
                         )
                        ),
                        padding: const EdgeInsets.all(10),
-                    child: Text(tr.value.toString())),
-                  Column(
+                    child: Text(tr.value.toString(),
+                    style: const TextStyle(
+                        fontWeight: FontWeight.bold, 
+                        fontSize: 20, 
+                        color: Colors.purple),
+                    )),
+                   Column(
                     children: [
                       Text(tr.title),
-                      Text(tr.date.toString()),
+                      Text(tr.date.toString(),
+                      
+                      ),
                     ],
                   )
                 ],
