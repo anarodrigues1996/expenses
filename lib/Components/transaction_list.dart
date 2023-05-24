@@ -19,14 +19,18 @@ class TransactionList extends StatelessWidget {
                   margin:
                       const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
                   decoration: BoxDecoration(
-                      border: Border.all(color: Colors.purple, width: 2)),
+                      border: Border.all(
+                        color: Theme.of(context).primaryColor,
+                      ),
+                      ),
                   padding: const EdgeInsets.all(10),
                   child: Text(
                     '${tr.value.toStringAsFixed(2)} ECV',
-                    style: const TextStyle(
+                    style: TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 20,
-                        color: Colors.purple),
+                        color: Theme.of(context).primaryColor,
+                        ),
                   )),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
